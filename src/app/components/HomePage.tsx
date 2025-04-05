@@ -1,8 +1,7 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 const HomePage = () => {
-  const [vantaEffect, setVantaEffect] = useState(null);
   const myRef = useRef(null);
 
   return (
