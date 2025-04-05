@@ -12,7 +12,7 @@ const Pricing = () => {
         </h2>
         <p className="mb-8 text-lg">
           At <strong>TECHYUG</strong>, we understand that every project is
-          unique. That&rsquo;s why we don&rsquo;t believe in one-size-fits-all
+          unique. That&apos;s why we don&apos;t believe in one-size-fits-all
           pricing. Instead, we craft custom plans based on your exact needs,
           goals, and budget.
         </p>
@@ -25,13 +25,13 @@ const Pricing = () => {
             <li>Fill out the contact form with your project requirements.</li>
             <li>Our team will reach out to schedule a Google Meet call.</li>
             <li>
-              We&rsquo;ll discuss your vision, goals, and budget to craft the
+              We&apos;ll discuss your vision, goals, and budget to craft the
               perfect plan for you.
             </li>
           </ul>
 
           <div className="mt-8 text-xl font-medium text-blue-700">
-            💡 Let&rsquo;s build something amazing — just the way you envision
+            💡 Let&apos;s build something amazing — just the way you envision
             it!
           </div>
         </div>

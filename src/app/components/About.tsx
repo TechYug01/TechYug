@@ -24,7 +24,7 @@ const About = () => {
           strategies.
         </p>
         <p className="mb-8 text-lg leading-relaxed">
-          At <strong>TECHYUG</strong>, we don&rsquo;t just develop &mdash; we
+          At <strong>TECHYUG</strong>, we don&apos;t just develop &mdash; we
           innovate, strategize, and engineer solutions that redefine the digital
           landscape.
         </p>

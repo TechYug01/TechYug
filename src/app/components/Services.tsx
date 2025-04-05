@@ -79,7 +79,7 @@ const Services = () => {
 
         <div className="mt-12">
           <p className="text-xl font-medium">
-            🚀 Let&rsquo;s build something exceptional together!
+            🚀 Let&apos;s build something exceptional together!
           </p>
         </div>
       </div>
