@@ -8,11 +8,11 @@ const About = () => {
     >
       <div className="max-w-5xl text-center">
         <h2 className="mb-6 text-4xl font-bold text-blue-700">
-          {`Where Creativity Meets Technology – Building the Future, Today!`}
+          Where Creativity Meets Technology &mdash; Building the Future, Today!
         </h2>
         <p className="mb-6 text-lg leading-relaxed">
-          At <strong>TECHYUG</strong>, we are more than just developers—we are
-          creators, problem-solvers, and digital architects dedicated to
+          At <strong>TECHYUG</strong>, we are more than just developers &mdash;
+          we are creators, problem-solvers, and digital architects dedicated to
           building high-performing websites, dynamic apps, and intuitive digital
           experiences.
         </p>
@@ -24,10 +24,9 @@ const About = () => {
           strategies.
         </p>
         <p className="mb-8 text-lg leading-relaxed">
-          At <strong>TECHYUG</strong>,{" "}
-          {`we don’t just develop—we innovate,
-          strategize, and engineer solutions that redefine the digital
-          landscape.`}
+          At <strong>TECHYUG</strong>, we don&rsquo;t just develop &mdash; we
+          innovate, strategize, and engineer solutions that redefine the digital
+          landscape.
         </p>
 
         <h3 className="mb-4 text-2xl font-semibold text-blue-600">
@@ -35,24 +34,20 @@ const About = () => {
         </h3>
         <ul className="mx-auto max-w-3xl list-inside list-disc space-y-3 text-left text-base sm:text-lg">
           <li>
-            ✅ <strong>Expert-Led Digital Transformation</strong>{" "}
-            {`– Backed by a
-            skilled team of developers, designers, and strategists.`}
+            ✅ <strong>Expert-Led Digital Transformation</strong> &mdash; Backed
+            by a skilled team of developers, designers, and strategists.
           </li>
           <li>
-            ✅ <strong>Custom-Tailored Solutions</strong>{" "}
-            {`– Scalable,
-            high-performance websites and apps that grow with your business.`}
+            ✅ <strong>Custom-Tailored Solutions</strong> &mdash; Scalable,
+            high-performance websites and apps that grow with your business.
           </li>
           <li>
-            ✅ <strong>Innovation-First Approach</strong>{" "}
-            {`– Leveraging the
-            latest technology to create seamless digital experiences.`}
+            ✅ <strong>Innovation-First Approach</strong> &mdash; Leveraging the
+            latest technology to create seamless digital experiences.
           </li>
           <li>
-            ✅ <strong>Client-Driven Success</strong>{" "}
-            {`– Your goals are at the
-            heart of everything we build.`}
+            ✅ <strong>Client-Driven Success</strong> &mdash; Your goals are at
+            the heart of everything we build.
           </li>
         </ul>
       </div>
