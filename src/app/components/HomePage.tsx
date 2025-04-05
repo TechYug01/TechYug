@@ -1,25 +1,12 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import BIRDS from "vanta/dist/vanta.birds.min";
 
 const HomePage = () => {
   const [vantaEffect, setVantaEffect] = useState(null);
   const myRef = useRef(null);
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(
-        BIRDS({
-          el: myRef.current,
-        }),
-      );
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    };
-  }, [vantaEffect]);
 
   return (
-    <div
+    <section
       ref={myRef}
       id="home"
       className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-teal-900 via-teal-700 to-teal-500 px-6 text-center text-white"
@@ -32,7 +19,7 @@ const HomePage = () => {
         things technology. We’re here to empower individuals and businesses with
         cutting-edge services and solutions that shape the future.
       </p>
-    </div>
+    </section>
   );
 };
 
