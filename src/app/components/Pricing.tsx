@@ -12,9 +12,9 @@ const Pricing = () => {
         </h2>
         <p className="mb-8 text-lg">
           At <strong>TECHYUG</strong>, we understand that every project is
-          unique. That&apos;s why we don&apos;t believe in one-size-fits-all
-          pricing. Instead, we craft custom plans based on your exact needs,
-          goals, and budget.
+          unique. That&apos;s why we don&apos;t believe in
+          one&#45;size&#45;fits&#45;all pricing. Instead, we craft custom plans
+          based on your exact needs, goals, and budget.
         </p>
 
         <div className="mx-auto max-w-2xl rounded-2xl bg-white p-8 text-left shadow-lg">
@@ -31,8 +31,8 @@ const Pricing = () => {
           </ul>
 
           <div className="mt-8 text-xl font-medium text-blue-700">
-            💡 Let&apos;s build something amazing — just the way you envision
-            it!
+            💡 Let&apos;s build something amazing &ndash; just the way you
+            envision it!
           </div>
         </div>
       </div>

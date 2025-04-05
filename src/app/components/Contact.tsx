@@ -9,8 +9,9 @@ const Contact = () => {
       <div className="w-full max-w-4xl text-center">
         <h2 className="mb-6 text-4xl font-bold text-blue-700">Contact Us</h2>
         <p className="mb-10 text-lg">
-          🚀 Let&apos;s build something exceptional together! Whether you're
-          ready to start or just have a question, we're here for you.
+          🚀 Let&apos;s build something exceptional together! Whether
+          you&apos;re ready to start or just have a question, we&apos;re here
+          for you.
         </p>
 
         <form className="mx-auto max-w-2xl space-y-6 rounded-2xl bg-gray-100 p-8 text-left shadow-lg">
@@ -68,7 +69,8 @@ const Contact = () => {
         </form>
 
         <div className="text-md mt-8 font-medium text-blue-700">
-          📞 24/7 Dedicated Support — Chat, Email & Phone Assistance Anytime
+          📞 24/7 Dedicated Support &ndash; Chat, Email & Phone Assistance
+          Anytime
         </div>
       </div>
     </section>

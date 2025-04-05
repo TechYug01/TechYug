@@ -9,10 +9,10 @@ const Services = () => {
       <div className="w-full max-w-6xl text-center">
         <h2 className="mb-6 text-4xl font-bold text-blue-700">What We Offer</h2>
         <p className="mx-auto mb-10 max-w-3xl text-lg">
-          At <strong>TECHYUG</strong>, we provide cutting-edge digital solutions
-          tailored to your business needs. Whether you're a startup, small
-          business, or enterprise, we craft high-quality digital products that
-          are scalable, engaging, and results-driven.
+          At <strong>TECHYUG</strong>, we provide cutting&#45;edge digital
+          solutions tailored to your business needs. Whether you&apos;re a
+          startup, small business, or enterprise, we craft high&#45;quality
+          digital products that are scalable, engaging, and results&#45;driven.
         </p>
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -21,7 +21,7 @@ const Services = () => {
               🔹 Web Design
             </h3>
             <p>
-              Transforming ideas into stunning, user-friendly websites that
+              Transforming ideas into stunning, user&#45;friendly websites that
               captivate and convert.
             </p>
           </div>
@@ -31,7 +31,7 @@ const Services = () => {
               🔹 Web Development
             </h3>
             <p>
-              Building high-performance, scalable websites and web apps for
+              Building high&#45;performance, scalable websites and web apps for
               businesses of all sizes.
             </p>
           </div>
@@ -61,7 +61,7 @@ const Services = () => {
               🔹 Content Writing
             </h3>
             <p>
-              Delivering compelling, SEO-optimized content that engages,
+              Delivering compelling, SEO&#45;optimized content that engages,
               informs, and drives results.
             </p>
           </div>

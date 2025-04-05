@@ -9,9 +9,9 @@ const Portfolio = () => {
       <div className="w-full max-w-6xl text-center">
         <h2 className="mb-6 text-4xl font-bold text-blue-700">Our Portfolio</h2>
         <p className="mx-auto mb-10 max-w-3xl text-lg">
-          Exceptional Websites, Unmatched Designs — explore some of our past
-          work that showcases our capabilities in creativity, performance, and
-          innovation.
+          Exceptional Websites, Unmatched Designs &ndash; explore some of our
+          past work that showcases our capabilities in creativity, performance,
+          and innovation.
         </p>
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -20,7 +20,9 @@ const Portfolio = () => {
             <div className="mb-4 flex h-40 items-center justify-center rounded-md bg-blue-100 text-lg font-bold text-blue-600">
               Project 1
             </div>
-            <h3 className="mb-2 text-xl font-semibold">E-commerce Website</h3>
+            <h3 className="mb-2 text-xl font-semibold">
+              E&#45;commerce Website
+            </h3>
             <p>
               Responsive online store with cart functionality and modern UI.
             </p>
