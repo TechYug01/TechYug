@@ -14,9 +14,9 @@ const HomePage = () => {
         TECHYUG - AN ERA OF TECH
       </h1>
       <p className="max-w-2xl text-lg text-white/90 sm:text-xl">
-        Welcome to TECHYUG – a modern hub for innovation, creativity, and all
+        {`Welcome to TECHYUG – a modern hub for innovation, creativity, and all
         things technology. We’re here to empower individuals and businesses with
-        cutting-edge services and solutions that shape the future.
+        cutting-edge services and solutions that shape the future.`}
       </p>
     </section>
   );

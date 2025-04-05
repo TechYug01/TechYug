@@ -9,8 +9,8 @@ const Contact = () => {
       <div className="w-full max-w-4xl text-center">
         <h2 className="mb-6 text-4xl font-bold text-blue-700">Contact Us</h2>
         <p className="mb-10 text-lg">
-          🚀 Let’s build something exceptional together! Whether you're ready to
-          start or just have a question, we're here for you.
+          {`🚀 Let’s build something exceptional together! Whether you're ready to
+          start or just have a question, we're here for you.`}
         </p>
 
         <form className="mx-auto max-w-2xl space-y-6 rounded-2xl bg-gray-100 p-8 text-left shadow-lg">

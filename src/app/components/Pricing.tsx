@@ -11,10 +11,11 @@ const Pricing = () => {
           Plans & Pricing
         </h2>
         <p className="mb-8 text-lg">
-          At <strong>TECHYUG</strong>, we understand that every project is
+          At <strong>TECHYUG</strong>,{" "}
+          {`we understand that every project is
           unique. That’s why we don’t believe in one-size-fits-all pricing.
           Instead, we craft custom plans based on your exact needs, goals, and
-          budget.
+          budget.`}
         </p>
 
         <div className="mx-auto max-w-2xl rounded-2xl bg-white p-8 text-left shadow-lg">
@@ -25,13 +26,13 @@ const Pricing = () => {
             <li>Fill out the contact form with your project requirements.</li>
             <li>Our team will reach out to schedule a Google Meet call.</li>
             <li>
-              We’ll discuss your vision, goals, and budget to craft the perfect
-              plan for you.
+              {`We’ll discuss your vision, goals, and budget to craft the perfect
+              plan for you.`}
             </li>
           </ul>
 
           <div className="mt-8 text-xl font-medium text-blue-700">
-            💡 Let’s build something amazing — just the way you envision it!
+            💡 {`Let’s build something amazing — just the way you envision it!`}
           </div>
         </div>
       </div>
