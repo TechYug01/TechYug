@@ -5,7 +5,7 @@ import * as THREE from "three";
 import GLOBE from "vanta/dist/vanta.globe.min";
 
 const HomePage = () => {
-  const myRef = useRef(null);
+  const myRef = useRef<HTMLDivElement | null>(null);
   const [vantaEffect, setVantaEffect] = useState<any>(null);
 
   useEffect(() => {
@@ -27,7 +27,9 @@ const HomePage = () => {
     }
 
     return () => {
-      if (vantaEffect) vantaEffect.destroy();
+      if (vantaEffect && typeof vantaEffect.destroy === "function") {
+        vantaEffect.destroy();
+      }
     };
   }, [vantaEffect]);
 
