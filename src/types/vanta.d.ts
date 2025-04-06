@@ -1,7 +1,7 @@
 declare module "vanta/dist/vanta.globe.min" {
   import type * as THREE from "three";
 
-  interface VantaOptions {
+  export interface VantaOptions {
     el: HTMLElement | string | null;
     THREE: typeof THREE;
     mouseControls?: boolean;
@@ -16,12 +16,11 @@ declare module "vanta/dist/vanta.globe.min" {
     [key: string]: unknown;
   }
 
-  interface VantaEffect {
+  export interface VantaEffect {
     setOptions: (options: Partial<VantaOptions>) => void;
     destroy: () => void;
   }
 
   const vantaGlobe: (options: VantaOptions) => VantaEffect;
-
   export default vantaGlobe;
 }

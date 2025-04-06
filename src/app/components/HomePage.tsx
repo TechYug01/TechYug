@@ -2,11 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
+import type { VantaEffect } from "vanta/dist/vanta.globe.min";
 import GLOBE from "vanta/dist/vanta.globe.min";
 
 const HomePage = () => {
   const myRef = useRef<HTMLDivElement | null>(null);
-  const [vantaEffect, setVantaEffect] = useState<any>(null);
+  const [vantaEffect, setVantaEffect] = useState<VantaEffect | null>(null);
 
   useEffect(() => {
     if (!vantaEffect) {
