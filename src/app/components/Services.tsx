@@ -63,8 +63,8 @@ const Services = () => {
         <p className="mx-auto mb-12 max-w-3xl text-lg text-gray-300">
           At <strong className="text-cyan-400">TECHYUG</strong>, we create
           futuristic digital solutions tailored to your unique needs. Whether
-          you're a startup or enterprise, we deliver high-performance products
-          that scale and excite.
+          you&apos;re a startup or enterprise, we deliver high&#45;performance
+          products that scale and excite.
         </p>
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
