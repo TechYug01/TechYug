@@ -73,8 +73,8 @@ const Services = () => {
               key={index}
               initial="rest"
               whileHover="hover"
-              animate="rest"
-              className="group relative h-64 overflow-hidden rounded-xl bg-[#1a1a2e] shadow-xl transition"
+              whileTap="hover"
+              className="group relative h-64 cursor-pointer overflow-hidden rounded-xl bg-[#1a1a2e] shadow-xl transition"
             >
               <motion.div
                 variants={{
