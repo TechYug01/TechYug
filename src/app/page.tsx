@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
 import Pricing from "./components/Pricing";
 import Services from "./components/Services";
+import "./style.css";
 
 export default function Home() {
   return (
