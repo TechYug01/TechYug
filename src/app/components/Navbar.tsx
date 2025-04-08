@@ -61,7 +61,7 @@ const Navbar = () => {
         initial={{ x: 1000, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="absolute right-0 mx-0 flex w-[80vw] max-w-7xl items-center justify-between gap-2 rounded-l-full bg-teal-500/80 px-4 py-4 max-md:w-auto"
+        className="absolute right-0 mx-0 flex w-[80vw] max-w-7xl items-center justify-between gap-2 rounded-l-full border border-white/20 bg-white/10 px-4 py-4 shadow-md backdrop-blur-lg max-md:w-auto"
       >
         {/* Desktop Nav */}
         <div className="hidden gap-4 font-medium text-white md:flex">
@@ -70,7 +70,7 @@ const Navbar = () => {
               key={sec}
               onClick={() => scrollTo(sec)}
               className={`rounded-4xl px-4 py-2 transition ${
-                activeSection === sec ? "bg-teal-800" : "hover:bg-teal-700"
+                activeSection === sec ? "bg-cyan-600" : "hover:bg-cyan-500"
               }`}
             >
               {sec.charAt(0).toUpperCase() + sec.slice(1)}
@@ -90,7 +90,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Slide */}
       <div
-        className={`fixed top-0 right-0 z-40 h-full w-64 transform bg-teal-500/80 px-6 py-8 text-white transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 right-0 z-40 h-full w-64 transform border-l border-white/20 bg-white/10 px-6 py-8 text-white shadow-lg backdrop-blur-lg transition-transform duration-300 ease-in-out md:hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -105,7 +105,7 @@ const Navbar = () => {
               key={sec}
               onClick={() => scrollTo(sec)}
               className={`rounded-lg px-3 py-2 text-left font-medium transition ${
-                activeSection === sec ? "bg-teal-800" : "hover:bg-teal-700"
+                activeSection === sec ? "bg-cyan-600" : "hover:bg-cyan-500"
               }`}
             >
               {sec.charAt(0).toUpperCase() + sec.slice(1)}

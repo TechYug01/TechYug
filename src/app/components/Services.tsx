@@ -50,6 +50,15 @@ const services = [
   },
 ];
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.5 },
+  }),
+};
+
 const Services = () => {
   return (
     <section
@@ -57,57 +66,89 @@ const Services = () => {
       className="services min-h-screen bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e] px-6 py-20 text-white"
     >
       <div className="mx-auto max-w-6xl text-center">
-        <h2 className="mb-6 text-4xl font-bold text-cyan-400 drop-shadow">
+        <motion.h2
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="mb-6 text-4xl font-bold text-cyan-400 drop-shadow"
+        >
           What We Offer
-        </h2>
-        <p className="mx-auto mb-12 max-w-3xl text-lg text-gray-300">
+        </motion.h2>
+
+        <motion.p
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          custom={1}
+          className="mx-auto mb-12 max-w-3xl text-lg text-gray-300"
+        >
           At <strong className="text-cyan-400">TECHYUG</strong>, we create
           futuristic digital solutions tailored to your unique needs. Whether
           you&apos;re a startup or enterprise, we deliver high&#45;performance
           products that scale and excite.
-        </p>
+        </motion.p>
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial="rest"
-              whileHover="hover"
-              whileTap="hover"
-              className="group relative h-64 cursor-pointer overflow-hidden rounded-xl bg-[#1a1a2e] shadow-xl transition"
+              custom={index + 2}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
             >
               <motion.div
-                variants={{
-                  rest: { y: 0, opacity: 1 },
-                  hover: { y: 250, opacity: 0 },
-                }}
-                transition={{ duration: 0.4 }}
-                className="absolute top-1/2 left-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center text-cyan-300"
+                initial="rest"
+                whileHover="hover"
+                whileTap="hover"
+                animate="rest"
+                className="group relative h-64 cursor-pointer overflow-hidden rounded-xl bg-[#1a1a2e] shadow-xl transition"
               >
-                {service.icon}
-                <h3 className="mt-2 text-xl font-semibold">{service.title}</h3>
-              </motion.div>
+                <motion.div
+                  variants={{
+                    rest: { y: 0, opacity: 1 },
+                    hover: { y: 250, opacity: 0 },
+                  }}
+                  transition={{ duration: 0.4 }}
+                  className="absolute top-1/2 left-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center text-cyan-300"
+                >
+                  {service.icon}
+                  <h3 className="mt-2 text-xl font-semibold">
+                    {service.title}
+                  </h3>
+                </motion.div>
 
-              <motion.p
-                variants={{
-                  rest: { y: -250, opacity: 0 },
-                  hover: { y: 0, opacity: 1 },
-                }}
-                transition={{ duration: 0.4 }}
-                className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-cyan-600 to-blue-700 px-6 text-base leading-relaxed text-white"
-              >
-                {service.description}
-              </motion.p>
+                <motion.p
+                  variants={{
+                    rest: { y: -250, opacity: 0 },
+                    hover: { y: 0, opacity: 1 },
+                  }}
+                  transition={{ duration: 0.4 }}
+                  className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-cyan-600 to-blue-700 px-6 text-base leading-relaxed text-white"
+                >
+                  {service.description}
+                </motion.p>
+              </motion.div>
             </motion.div>
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col items-center">
+        <motion.div
+          variants={fadeInUp}
+          custom={8}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mt-16 flex flex-col items-center"
+        >
           <Sparkles size={32} className="mb-2 animate-pulse text-cyan-400" />
           <p className="text-xl font-semibold text-cyan-400 drop-shadow">
             Let&apos;s build something exceptional together!
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
