@@ -2,8 +2,15 @@
 
 import { projectData } from "@/app/data/projectData";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronRight, X } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
+import "swiper/css";
+import "swiper/css/effect-cards";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { EffectCards, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const fadeInVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -19,11 +26,9 @@ const fadeInVariants = {
 
 const Portfolio = () => {
   const [activeProject, setActiveProject] = useState<null | number>(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleCardClick = (index: number) => {
     setActiveProject(index);
-    setCurrentSlide(0);
   };
 
   const closeModal = () => setActiveProject(null);
@@ -51,20 +56,22 @@ const Portfolio = () => {
           {projectData.map((project, index) => (
             <motion.div
               key={index}
-              className="cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4 shadow-xl backdrop-blur-md"
+              className="cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4 shadow-xl backdrop-blur-md transition-transform hover:scale-105"
               onClick={() => handleCardClick(index)}
-              whileHover={{ scale: 1.05 }}
               initial="hidden"
               transition={{ duration: 0.2 }}
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInVariants}
             >
-              <img
-                src={project.images[0]}
-                alt={project.title}
-                className="h-48 w-full rounded-xl object-cover"
-              />
+              <div className="relative h-48 w-full overflow-hidden rounded-xl">
+                <Image
+                  src={project.images[0]}
+                  alt={project.title}
+                  className="object-cover"
+                  loading="lazy"
+                />
+              </div>
               <h3 className="mt-4 text-xl font-semibold text-cyan-400">
                 {project.title}
               </h3>
@@ -92,44 +99,35 @@ const Portfolio = () => {
             >
               <button
                 onClick={closeModal}
-                className="absolute -top-1 right-2 mt-1 cursor-pointer p-2 text-white transition hover:text-red-500"
+                className="absolute -top-1 right-2 mt-2 cursor-pointer p-2 text-white transition hover:text-red-500"
               >
                 <X size={20} />
               </button>
 
-              <div className="relative mt-5 mb-6 flex items-center justify-center">
-                <img
-                  src={projectData[activeProject].images[currentSlide]}
-                  className="h-64 w-full rounded-xl object-cover"
-                />
-                {projectData[activeProject].images.length > 1 && (
-                  <>
-                    <button
-                      className="absolute top-1/2 left-2 -translate-y-1/2 rounded-full bg-white/10 p-2 hover:bg-white/20"
-                      onClick={() =>
-                        setCurrentSlide((prev) =>
-                          prev === 0
-                            ? projectData[activeProject].images.length - 1
-                            : prev - 1,
-                        )
-                      }
-                    >
-                      <ChevronLeft />
-                    </button>
-                    <button
-                      className="absolute top-1/2 right-2 -translate-y-1/2 rounded-full bg-white/10 p-2 hover:bg-white/20"
-                      onClick={() =>
-                        setCurrentSlide((prev) =>
-                          prev === projectData[activeProject].images.length - 1
-                            ? 0
-                            : prev + 1,
-                        )
-                      }
-                    >
-                      <ChevronRight />
-                    </button>
-                  </>
-                )}
+              <div className="relative mt-5 mb-6 overflow-hidden">
+                <Swiper
+                  modules={[Navigation, Pagination, EffectCards]}
+                  navigation
+                  pagination={{ clickable: true }}
+                  effect="cards"
+                  speed={600}
+                  spaceBetween={30}
+                  slidesPerView={1}
+                  className="rounded-md"
+                >
+                  {projectData[activeProject].images.map((img, i) => (
+                    <SwiperSlide key={i}>
+                      <div className="relative h-[450px] w-full overflow-hidden rounded-xl max-lg:h-[350px] max-md:h-[300px] max-sm:h-[200px]">
+                        <Image
+                          src={img}
+                          alt={`Slide ${i + 1}`}
+                          className="rounded-md object-fill"
+                          loading="lazy"
+                        />
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
               </div>
 
               <h3 className="mb-2 text-2xl font-bold text-cyan-400">
