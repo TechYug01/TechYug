@@ -47,7 +47,7 @@ const HomePage = () => {
             initial={{ x: "-100vw", rotateZ: -180, opacity: 0 }}
             animate={{ x: 0, rotateZ: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="mb-4 text-4xl font-bold text-cyan-400 drop-shadow-[0_2px_10px_rgba(34,211,238,0.7)] sm:text-5xl"
+            className="mb-4 text-4xl font-bold text-cyan-400 drop-shadow-[0_1px_6px_rgba(34,211,238,0.7)] sm:text-5xl"
           >
             TECHYUG &#45; AN ERA OF TECH
           </motion.h1>
