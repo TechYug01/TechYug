@@ -64,11 +64,11 @@ const Portfolio = () => {
               viewport={{ once: true }}
               variants={fadeInVariants}
             >
-              <div className="relative h-48 w-full overflow-hidden rounded-xl">
+              <div className="relative h-48 w-full overflow-hidden rounded-lg">
                 <Image
                   src={project.images[0]}
                   alt={project.title}
-                  className="object-cover"
+                  className="rounded-lg object-cover"
                   loading="lazy"
                 />
               </div>
