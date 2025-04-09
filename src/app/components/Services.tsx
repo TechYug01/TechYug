@@ -10,6 +10,7 @@ import {
   Smartphone,
   Sparkles,
 } from "lucide-react";
+import { useState } from "react";
 
 const services = [
   {
@@ -55,11 +56,13 @@ const fadeInUp = {
   visible: (i = 1) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.15, duration: 0.5 },
+    transition: { delay: i * 0.05, duration: 0.5 },
   }),
 };
 
 const Services = () => {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   return (
     <section
       id="services"
@@ -101,17 +104,16 @@ const Services = () => {
               variants={fadeInUp}
             >
               <motion.div
-                initial="rest"
-                whileHover="hover"
-                whileTap="hover"
-                animate="rest"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
                 className="group relative h-64 cursor-pointer overflow-hidden rounded-xl bg-[#1a1a2e] shadow-xl transition"
               >
                 <motion.div
-                  variants={{
-                    rest: { y: 0, opacity: 1 },
-                    hover: { y: 250, opacity: 0 },
-                  }}
+                  animate={
+                    hoveredIndex === index
+                      ? { y: 250, opacity: 0 }
+                      : { y: 0, opacity: 1 }
+                  }
                   transition={{ duration: 0.4 }}
                   className="absolute top-1/2 left-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center text-cyan-300"
                 >
@@ -122,10 +124,11 @@ const Services = () => {
                 </motion.div>
 
                 <motion.p
-                  variants={{
-                    rest: { y: -250, opacity: 0 },
-                    hover: { y: 0, opacity: 1 },
-                  }}
+                  animate={
+                    hoveredIndex === index
+                      ? { y: 0, opacity: 1 }
+                      : { y: -250, opacity: 0 }
+                  }
                   transition={{ duration: 0.4 }}
                   className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-cyan-600 to-blue-700 px-6 text-base leading-relaxed text-white"
                 >

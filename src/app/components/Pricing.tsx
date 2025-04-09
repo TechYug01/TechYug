@@ -11,7 +11,7 @@ const fadeIn = {
   visible: (i = 1) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.3, duration: 0.8 },
+    transition: { delay: i * 0.2, duration: 0.8 },
   }),
 };
 
