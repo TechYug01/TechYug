@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Feedback from "./components/Feedback";
@@ -19,6 +20,7 @@ export default function Home() {
       <Pricing />
       <Feedback />
       <Contact />
+      <Toaster position="bottom-center" />
     </div>
   );
 }

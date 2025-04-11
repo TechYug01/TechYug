@@ -4,6 +4,8 @@ import contact from "@/../public/contact.svg";
 import { motion } from "framer-motion";
 import { Headphones, Mail, MessageCircle, Phone, User } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 40 },
@@ -15,9 +17,12 @@ const fadeIn = {
 };
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    setLoading(true);
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
 
@@ -37,10 +42,12 @@ const Contact = () => {
     const json = await res.json();
 
     if (json.success) {
-      alert("✅ Message sent successfully!");
+      toast.success("Message sent successfully!");
+      setLoading(false);
       form.reset();
     } else {
-      alert("❌ Failed to send. Please try again.");
+      toast.error("Failed to send. Please try again.");
+      setLoading(false);
       console.error(json.error);
     }
   };
@@ -115,6 +122,7 @@ const Contact = () => {
               <input
                 id="name"
                 name="name"
+                required
                 type="text"
                 placeholder="John Doe"
                 autoComplete="name"
@@ -134,6 +142,7 @@ const Contact = () => {
               <input
                 id="email"
                 name="email"
+                required
                 type="email"
                 autoComplete="email"
                 placeholder="johndoe@example.com"
@@ -153,6 +162,7 @@ const Contact = () => {
               <input
                 id="phone"
                 name="phone"
+                required
                 type="tel"
                 autoComplete="phone"
                 placeholder="+91 9839001213"
@@ -172,6 +182,7 @@ const Contact = () => {
               <textarea
                 id="message"
                 name="message"
+                required
                 rows={4}
                 placeholder="Tell us about your project..."
                 className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2 text-white placeholder-white/50 focus:ring-2 focus:ring-cyan-400 focus:outline-none"
@@ -180,7 +191,8 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="w-full cursor-pointer rounded-lg bg-blue-600 py-3 font-medium text-white transition hover:bg-blue-700"
+              disabled={loading}
+              className={`w-full cursor-pointer rounded-lg py-3 font-medium text-white transition ${loading ? "bg-blue-300" : "bg-blue-600 hover:bg-blue-700"}`}
             >
               Send Message
             </button>
