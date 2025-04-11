@@ -94,7 +94,7 @@ const Portfolio = () => {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 50, opacity: 0 }}
               transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              className="relative max-h-[95vh] w-[90vw] max-w-4xl overflow-y-auto rounded-2xl border border-white/10 bg-white/5 p-6 text-left shadow-lg backdrop-blur-lg"
+              className="custom-scroll-hide relative max-h-[95vh] w-[90vw] max-w-4xl overflow-y-scroll rounded-2xl border border-white/10 bg-white/5 p-6 text-left shadow-lg backdrop-blur-lg"
               onClick={(e) => e.stopPropagation()}
             >
               <button

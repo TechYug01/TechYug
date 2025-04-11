@@ -34,6 +34,7 @@ const Pricing = () => {
             alt="Pricing Illustration"
             width={500}
             height={500}
+            priority
             className="w-full max-w-md object-contain drop-shadow-xl"
           />
         </motion.div>

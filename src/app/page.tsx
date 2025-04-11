@@ -1,5 +1,6 @@
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Feedback from "./components/Feedback";
 import HomePage from "./components/HomePage";
 import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
@@ -16,6 +17,7 @@ export default function Home() {
       <Services />
       <Portfolio />
       <Pricing />
+      <Feedback />
       <Contact />
     </div>
   );

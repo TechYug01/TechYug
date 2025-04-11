@@ -15,6 +15,35 @@ const fadeIn = {
 };
 
 const Contact = () => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      message: formData.get("message"),
+    };
+
+    const res = await fetch("/api/send-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    const json = await res.json();
+
+    if (json.success) {
+      alert("✅ Message sent successfully!");
+      form.reset();
+    } else {
+      alert("❌ Failed to send. Please try again.");
+      console.error(json.error);
+    }
+  };
   return (
     <section
       id="contact"
@@ -66,6 +95,7 @@ const Contact = () => {
 
           {/* Form */}
           <motion.form
+            onSubmit={handleSubmit}
             variants={fadeIn}
             custom={2}
             initial="hidden"
@@ -84,6 +114,7 @@ const Contact = () => {
               </label>
               <input
                 id="name"
+                name="name"
                 type="text"
                 placeholder="John Doe"
                 autoComplete="name"
@@ -102,6 +133,7 @@ const Contact = () => {
               </label>
               <input
                 id="email"
+                name="email"
                 type="email"
                 autoComplete="email"
                 placeholder="johndoe@example.com"
@@ -120,6 +152,7 @@ const Contact = () => {
               </label>
               <input
                 id="phone"
+                name="phone"
                 type="tel"
                 autoComplete="phone"
                 placeholder="+91 9839001213"
@@ -138,6 +171,7 @@ const Contact = () => {
               </label>
               <textarea
                 id="message"
+                name="message"
                 rows={4}
                 placeholder="Tell us about your project..."
                 className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2 text-white placeholder-white/50 focus:ring-2 focus:ring-cyan-400 focus:outline-none"

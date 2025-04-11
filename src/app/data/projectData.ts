@@ -11,6 +11,16 @@ import picture6 from "@/../public/carzi/Picture6.png";
 import picture7 from "@/../public/carzi/Picture7.png";
 import picture8 from "@/../public/carzi/Picture8.png";
 import picture9 from "@/../public/carzi/Picture9.png";
+
+import medPicture1 from "@/../public/medscan/Picture1.png";
+import medPicture2 from "@/../public/medscan/Picture2.png";
+import medPicture3 from "@/../public/medscan/Picture3.png";
+import medPicture4 from "@/../public/medscan/Picture4.png";
+import medPicture5 from "@/../public/medscan/Picture5.png";
+import medPicture6 from "@/../public/medscan/Picture6.png";
+import medPicture7 from "@/../public/medscan/Picture7.png";
+import medPicture8 from "@/../public/medscan/Picture8.png";
+
 import { StaticImageData } from "next/image";
 
 interface Project {
@@ -54,18 +64,28 @@ export const projectData: Project[] = [
   },
   {
     id: 2,
-    title: "Devfolio - Developer Portfolio",
+    title: "MedScan - Medical Image Diagnosis",
     description:
-      "Devfolio is a modern developer portfolio template built with React. It showcases projects, skills, and blogs. Designed with responsiveness and accessibility in mind.",
-    technologies: ["React", "Tailwind CSS", "Vite"],
-    images: [picture1],
-  },
-  {
-    id: 3,
-    title: "ShopWave - E-commerce Platform",
-    description:
-      "ShopWave is a sleek, responsive e-commerce website. Built with MERN stack, it supports user authentication, product search, cart and payment integration.",
-    technologies: ["React", "Express", "MongoDB", "Node.js"],
-    images: [picture1],
+      "MedScan is an advanced AI-powered web application designed for medical image diagnosis. Built using React, FastAPI, and TensorFlow, it supports diagnosis from chest X-rays (e.g., Pneumonia detection), eye fundus images (detecting up to 5 eye conditions including diabetic retinopathy and cataract), and classifies 23 different types of skin diseases. The system leverages machine learning and deep learning models for accurate prediction and is optimized with a clean, responsive UI using Tailwind CSS.",
+    technologies: [
+      "React",
+      "Python",
+      "FastAPI",
+      "JavaScript",
+      "CSS",
+      "Tailwind CSS",
+      "Machine Learning",
+      "TensorFlow",
+    ],
+    images: [
+      medPicture1,
+      medPicture2,
+      medPicture3,
+      medPicture4,
+      medPicture5,
+      medPicture6,
+      medPicture7,
+      medPicture8,
+    ],
   },
 ];

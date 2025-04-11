@@ -11,6 +11,7 @@ const sections = [
   "services",
   "portfolio",
   "pricing",
+  "feedback",
   "contact",
 ];
 
