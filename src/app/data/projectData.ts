@@ -18,8 +18,9 @@ import medPicture3 from "@/../public/medscan/Picture3.png";
 import medPicture4 from "@/../public/medscan/Picture4.png";
 import medPicture5 from "@/../public/medscan/Picture5.png";
 import medPicture6 from "@/../public/medscan/Picture6.png";
-import medPicture7 from "@/../public/medscan/Picture7.png";
-import medPicture8 from "@/../public/medscan/Picture8.png";
+
+import devfolioImage from "@/../public/devfolio/Picture1.png";
+import shopwaveImage from "@/../public/shopwave/Picture1.png";
 
 import { StaticImageData } from "next/image";
 
@@ -84,8 +85,34 @@ export const projectData: Project[] = [
       medPicture4,
       medPicture5,
       medPicture6,
-      medPicture7,
-      medPicture8,
     ],
+  },
+  {
+    id: 3,
+    title: "ShopWave - Modern E-commerce",
+    description:
+      "ShopWave is a sleek and responsive e-commerce platform designed for seamless online shopping experiences. Featuring advanced product filtering, a smooth checkout flow, and real-time cart updates, the app is built with Next.js and MongoDB for scalable performance.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "MongoDB",
+      "Tailwind CSS",
+      "Stripe",
+    ],
+    images: [shopwaveImage],
+  },
+  {
+    id: 4,
+    title: "Devfolio - Developer Portfolio Builder",
+    description:
+      "Devfolio is an intuitive portfolio builder tailored for developers. Users can showcase projects, skills, and blogs with ease. The platform offers dynamic theming, markdown blog support, and live previews for an engaging personal brand experience.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Markdown",
+      "Vercel",
+    ],
+    images: [devfolioImage],
   },
 ];

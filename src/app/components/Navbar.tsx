@@ -10,6 +10,7 @@ const sections = [
   "about",
   "services",
   "portfolio",
+  "technologies",
   "pricing",
   "feedback",
   "contact",
@@ -65,12 +66,12 @@ const Navbar = () => {
         className="absolute right-0 mx-0 flex w-[80vw] max-w-7xl items-center justify-between gap-2 rounded-l-full border border-white/20 bg-white/10 px-4 py-4 shadow-md backdrop-blur-lg max-md:w-auto"
       >
         {/* Desktop Nav */}
-        <div className="hidden gap-4 font-medium text-white md:flex">
+        <div className="hidden items-center gap-1 font-medium text-white md:flex md:text-[12px] lg:gap-2 lg:text-[14px] xl:gap-4 xl:text-[16px] 2xl:text-[18px]">
           {sections.map((sec) => (
             <button
               key={sec}
               onClick={() => scrollTo(sec)}
-              className={`rounded-4xl px-4 py-2 transition ${
+              className={`rounded-4xl px-2 py-1 transition md:px-3 md:py-2 lg:px-4 lg:py-2 ${
                 activeSection === sec ? "bg-cyan-600" : "hover:bg-cyan-500"
               }`}
             >

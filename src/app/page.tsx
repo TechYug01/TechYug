@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
 import Pricing from "./components/Pricing";
 import Services from "./components/Services";
+import Technologies from "./components/Technologies";
 import "./style.css";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <About />
       <Services />
       <Portfolio />
+      <Technologies />
       <Pricing />
       <Feedback />
       <Contact />
