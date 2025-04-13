@@ -47,7 +47,7 @@ const HomePage = () => {
             initial={{ x: "-100vw", rotateZ: -180, opacity: 0 }}
             animate={{ x: 0, rotateZ: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="mb-4 text-4xl font-bold text-cyan-400 drop-shadow-[0_1px_6px_rgba(34,211,238,0.7)] sm:text-5xl"
+            className="mb-4 text-4xl font-bold text-cyan-400 sm:text-5xl"
           >
             TECHYUG &#45; AN ERA OF TECH
           </motion.h1>
@@ -56,7 +56,7 @@ const HomePage = () => {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 1.2 }}
-            className="mx-auto max-w-3xl text-base text-[#e0f7fa] drop-shadow-[0_1px_6px_rgba(0,255,255,0.4)] sm:text-lg"
+            className="mx-auto max-w-3xl text-base text-[#e0f7fa] sm:text-lg"
           >
             Welcome to{" "}
             <strong className="font-semibold text-cyan-300">TECHYUG</strong>{" "}
