@@ -66,7 +66,7 @@ const Navbar = () => {
         className="absolute right-0 mx-0 flex w-[80vw] max-w-7xl items-center justify-between gap-2 rounded-l-full border border-white/20 bg-white/10 px-4 py-4 shadow-md backdrop-blur-lg max-md:w-auto"
       >
         {/* Desktop Nav */}
-        <div className="hidden items-center gap-1 font-medium text-white md:flex md:text-[12px] lg:gap-2 lg:text-[14px] xl:gap-4 xl:text-[16px] 2xl:text-[18px]">
+        <div className="hidden items-center gap-1 font-medium text-white md:flex md:text-[12px] lg:gap-2 lg:text-[14px] xl:gap-4 xl:text-[16px]">
           {sections.map((sec) => (
             <button
               key={sec}
