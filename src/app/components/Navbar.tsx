@@ -71,7 +71,7 @@ const Navbar = () => {
             <button
               key={sec}
               onClick={() => scrollTo(sec)}
-              className={`rounded-4xl px-2 py-1 transition md:px-3 md:py-2 lg:px-4 lg:py-2 ${
+              className={`cursor-pointer rounded-4xl px-2 py-1 transition md:px-3 md:py-2 lg:px-4 lg:py-2 ${
                 activeSection === sec ? "bg-cyan-600" : "hover:bg-cyan-500"
               }`}
             >
