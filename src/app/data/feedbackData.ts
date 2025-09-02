@@ -28,7 +28,7 @@ export const feedbackData: Feedback[] = [
   {
     project: "Devfolio",
     review:
-      "We needed a sleek, modern portfolio template that developers could actually connect with—not just visually, but functionally. TechYug team absolutely nailed it with Devfolio. Built using React and Tailwind CSS, and powered by the speed of Vite, the platform feels incredibly lightweight yet robust. The layout is clean, accessible, and responsive across every device we tested. Beyond the UI, he structured the codebase in a way that made customization effortless—even for devs who aren’t frontend-heavy. Whether it’s showcasing projects, highlighting skills, or publishing blogs, Devfolio offers the kind of clarity and elegance that developers appreciate. A job brilliantly executed.",
+      "We needed a sleek, modern portfolio template that developers could actually connect with—not just visually, but functionally. TechYug team absolutely nailed it with Devfolio. Built using React and Tailwind CSS, and powered by the speed of Vite, the platform feels incredibly lightweight yet robust. The layout is clean, accessible, and responsive across every device we tested. Beyond the UI, he structured the codebase in a way that made customization effortless—even for devs who aren't frontend-heavy. Whether it's showcasing projects, highlighting skills, or publishing blogs, Devfolio offers the kind of clarity and elegance that developers appreciate. A job brilliantly executed.",
     author: "Karan Deshmukh",
     role: "Developer Community Lead, CodeBridge Collective",
     rating: 5,
@@ -36,9 +36,16 @@ export const feedbackData: Feedback[] = [
   {
     project: "shopwave",
     review:
-      "We approached TECHYUG with a vision — an e-commerce experience that felt effortless, fast, and modern. What he delivered with ShopWave was all that and more. Right from the first mockups to deploying the full MERN-based build, his process was organized, insightful, and incredibly efficient. The platform isn’t just functional — it’s smart. The product filters are lightning fast, the cart logic is rock-solid, and the overall UI feels clean and intuitive on every screen size. Even complex pieces like secure login flows and payment gateway handling were done with meticulous attention to detail. The Team doesn’t just code — he thinks like a product builder. And that’s rare.",
+      "We approached TECHYUG with a vision — an e-commerce experience that felt effortless, fast, and modern. What he delivered with ShopWave was all that and more. Right from the first mockups to deploying the full MERN-based build, his process was organized, insightful, and incredibly efficient. The platform isn't just functional — it's smart. The product filters are lightning fast, the cart logic is rock-solid, and the overall UI feels clean and intuitive on every screen size. Even complex pieces like secure login flows and payment gateway handling were done with meticulous attention to detail. The Team doesn't just code — he thinks like a product builder. And that's rare.",
     author: "Tanay Mehta",
     role: "Founder, NuEdge Retail Tech",
     rating: 4,
   },
+  {
+    project: "A&P Buyers Agency",
+    review: "My experience with Techyug has been nothing short of fantastic. From initial planning to service delivery Alok and team have had great attention to detail, commitment and transparency. They were able to meet out significant time crunch and deliver our company's website. They were flexible and supportive. During the early stages of establishing your company you are always very particular about getting things perfect and Alok and his dedicated team have done just that. Thank you for your patience and helping set up A&P Buyers Agency's website, we are very excited to continue working together!",
+    author: "Miss Preity",
+    role: "CTO, A&P Buyers Agency",
+    rating: 5
+  }
 ];
