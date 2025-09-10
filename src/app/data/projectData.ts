@@ -22,6 +22,13 @@ import medPicture6 from "@/../public/medscan/Picture6.png";
 import devfolioImage from "@/../public/devfolio/Picture1.png";
 import shopwaveImage from "@/../public/shopwave/Picture1.png";
 
+import apPicture1 from "@/../public/apbuyers/Picture1.png";
+import apPicture2 from "@/../public/apbuyers/Picture2.png";
+import apPicture3 from "@/../public/apbuyers/Picture3.png";
+import apPicture4 from "@/../public/apbuyers/Picture4.png";
+import apPicture5 from "@/../public/apbuyers/Picture5.png";
+import apPicture6 from "@/../public/apbuyers/Picture6.png";
+
 import { StaticImageData } from "next/image";
 
 interface Project {
@@ -34,6 +41,31 @@ interface Project {
 }
 
 export const projectData: Project[] = [
+  {
+    id: 3,
+    title: "A&P Buyers Agency - Real Estate Consulting Platform",
+    description:
+      "A&P Buyers Agency is a modern, responsive real estate consulting platform built to help clients discover, analyze, and secure high-performing properties across Australia. Designed with a clean, conversion-focused UI, the platform showcases property-buying expertise, client testimonials, live events, and booking capabilities. Built using Next.js 15 with TypeScript, Tailwind CSS, and Framer Motion, the site offers seamless performance, animations, and a smooth user experience. It integrates SEO optimization via `next-seo`, includes dynamic carousels, testimonial sliders, and an optimized video-based hero section with image fallback for faster load times. The website also features dark/light theme toggling, advanced image optimization, and accessibility best practices.",
+    technologies: [
+      "Next.js 15",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Embla Carousel",
+      "Lucide Icons",
+      "Responsive Design",
+      "Dark/Light Mode",
+      "Image Optimization",
+    ],
+    images: [
+      apPicture1,
+      apPicture2,
+      apPicture3,
+      apPicture4,
+      apPicture5,
+      apPicture6,
+    ],
+  },
   {
     id: 1,
     title: "Carzi - Car Pooling App",
